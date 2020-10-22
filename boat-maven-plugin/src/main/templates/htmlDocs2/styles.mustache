@@ -4,18 +4,27 @@
 
 
 * {
-  font-family: 'Source Code Pro', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
+
+#methodsubtable>tbody>tr>td:first-child {
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-size:14px;
+  padding:2px 4px;
+  white-space:nowrap;
+}
+
 body {
   min-width: 980px;
+  background-color: #eee;
 }
 
 .app-desc {
-  color: #808080
+  color: #121212
 }
 
 body, p, a, div, th, td, li {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   text-shadow: none !important;
@@ -23,7 +32,7 @@ body, p, a, div, th, td, li {
 
 td.code {
   font-size: 14px;
-  font-family: "Source Code Pro", monospace;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   font-style: normal;
   font-weight: 400;
 }
@@ -31,15 +40,11 @@ td.code {
 #content {
   padding-top: 16px;
   z-Index: -1;
-  margin-left: 270px;
-}
-
-p {
-  color: #808080;
+  margin-left: 350px;
 }
 
 h1 {
-  font-family: "Source Sans Pro Semibold", sans-serif;
+  font-family: "Roboto Semibold", sans-serif;
   font-weight: normal;
   font-size: 44px;
   line-height: 50px;
@@ -48,7 +53,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 24px;
   line-height: 40px;
@@ -56,13 +61,65 @@ h2 {
   padding: 0;
 }
 
+#project {
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+#header {
+  padding: 16px 32px;
+  background-color: white;
+  margin-bottom: 32px;
+  border-radius: 6px;
+}
+
+
+div.secured-by {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.secured-by > h2 {
+  border-left: 4px solid orange;
+  padding-top: 0;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+div.secured-by > h2:only-child {
+  display: none!important;
+}
+
+div.secured-by > pre{
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 8;
+}
+
+div.secured-by > pre:nth-child(2){
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding-top: 8px;
+}
+
+div.secured-by > pre:last-child{
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-bottom: 8px;
+}
+
 section {
-  border-top: 1px solid #ebebeb;
-  padding: 30px 0;
+  padding: 16px 32px;
+  background-color: white;
+  margin-bottom: 32px;
+  border-radius: 6px;
 }
 
 section h1 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -76,34 +133,39 @@ article {
 }
 
 article h1 {
-  font-family: "Source Sans Pro Bold", sans-serif;
+  font-family: "Roboto Bold", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 26px;
+  padding-top: 30px;
+  margin-bottom: 10px;
 }
 
 article h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  margin: 0 0 10px 0;
+  padding-top: 30px;
+  margin-bottom: 10px;
 }
 
 article h3 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  margin: 0 0 10px 0;
+  padding-top: 30px;
+  margin-bottom: 10px;
 }
 
 article h4 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  margin: 0 0 8px 0;
+  padding-top: 30px;
+  margin-bottom: 10px;
 }
 
 table {
@@ -115,7 +177,7 @@ table {
 th {
   background-color: #f5f5f5;
   text-align: left;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   padding: 4px 8px;
   border: #e0e0e0 1px solid;
@@ -152,7 +214,7 @@ td {
 }
 
 #apidoc h1 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -162,7 +224,7 @@ td {
 }
 
 #apidoc h2 {
-  font-family: "Source Sans Pro Bold", sans-serif;
+  font-family: "Roboto Bold", sans-serif;
   font-weight: 600;
   font-size: 22px;
   line-height: 26px;
@@ -173,12 +235,29 @@ td {
  * pre / code
  * ------------------------------------------------------------------------------------------ */
 pre {
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   background-color: #292b36;
   color: #ffffff;
   padding: 10px;
   border-radius: 6px;
   position: relative;
   margin: 10px 0 20px 0;
+}
+
+span.language-html{
+  margin-right: 16px;
+  display: inline-flex;
+  width: 36px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 
 code.language-text {
@@ -189,16 +268,16 @@ pre.language-json {
   overflow: auto;
 }
 
-pre.language-html {
+pre.language-html{
   margin: 40px 0 20px 0;
 }
 
-pre.language-html:before {
+pre.language-html:before{
   content: attr(data-type);
   position: absolute;
   top: -30px;
   left: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 15px;
   display: inline-block;
@@ -209,19 +288,23 @@ pre.language-html:before {
   color: #ffffff;
 }
 
-pre.language-html[data-type="get"]:before {
+pre.language-html[data-type="get"]:before,
+span.language-html[data-type="get"]{
   background-color: green;
 }
 
-pre.language-html[data-type="put"]:before {
+pre.language-html[data-type="put"]:before,
+span.language-html[data-type="put"]{
   background-color: #e5c500;
 }
 
-pre.language-html[data-type="post"]:before {
+pre.language-html[data-type="post"]:before,
+span.language-html[data-type="post"]{
   background-color: #4070ec;
 }
 
-pre.language-html[data-type="delete"]:before {
+pre.language-html[data-type="delete"]:before,
+span.language-html[data-type="delete"]{
   background-color: #ed0039;
 }
 
@@ -237,7 +320,7 @@ pre.language-api .pun {
 pre code {
   display: block;
   font-size: 14px;
-  font-family: "Source Code Pro", monospace;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   font-style: normal;
   font-weight: 400;
 }
@@ -252,7 +335,7 @@ pre code.sample-request-response-json {
  * Sidenav
  * ------------------------------------------------------------------------------------------ */
 .sidenav {
-  width: 228px;
+  width: 300px;
   margin: 0;
   padding: 20px;
   position: fixed;
@@ -263,39 +346,45 @@ pre code.sample-request-response-json {
   overflow-y: auto;
   background-color: #f5f5f5;
   z-index: 10;
+  border-right: 1px solid #ddd;
+}
+
+.sidenav > li {
+ line-height: 24px;
 }
 
 .sidenav > li > a {
   display: block;
-  width: 192px;
   margin: 0;
   padding: 2px 11px;
-  border: 0;
-  border-left: transparent 4px solid;
-  border-right: transparent 4px solid;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  color: rgb(40, 45, 68);
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidenav > li.nav-header > a {
-  padding: 5px 15px;
-  border: 1px solid #e5e5e5;
-  width: 190px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  background-color: #4c8eca;
-  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: rgb(133, 139, 165);
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
+.sidenav > li.nav-header {
+  margin-top: 16px;
+}
+.sidenav > li.nav-header:first-child {
+  margin-top: 0px;
+}
 .sidenav > li.nav-header.active > a {
-  background-color: #4c8eca;
-  color: #fff;
+  color: #121212;
 }
-
-
-00427D
 
 .sidenav > .active > a {
   position: relative;
@@ -387,7 +476,7 @@ ul.nav-tabs {
   cursor: pointer
 }
 .json-schema-view, json-schema-view {
-  font-family: monospace;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   font-size: 0;
   display: table-cell
 }
@@ -406,10 +495,6 @@ ul.nav-tabs {
   text-decoration: none;
   color: #333
 }
-.json-schema-view .description, json-schema-view .description {
-  color: gray;
-  font-style: italic
-}
 .json-schema-view .readOnly, json-schema-view .readOnly {
   color: gray;
   font-style: italic
@@ -417,9 +502,6 @@ ul.nav-tabs {
 .json-schema-view .nullable, json-schema-view .nullable {
   color: gray;
   font-style: italic
-}
-.pattern, .example {
-  color: blue;
 }
 .default {
   color: black;
@@ -444,17 +526,18 @@ ul.nav-tabs {
 }
 .json-schema-view .name, json-schema-view .name {
   color: #00f;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   display: table-cell;
   vertical-align: top
 }
 .json-schema-view .type, json-schema-view .type {
-  color: green
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
 }
 .json-schema-view .type-any, json-schema-view .type-any {
   color: #33f
 }
 .json-schema-view .required, json-schema-view .required {
-  color: red
+  color: #ed0039
 }
 .json-schema-view .inner, json-schema-view .inner {
   padding-left: 18px
@@ -469,7 +552,7 @@ ul.nav-tabs {
   transform: rotate(-90deg)
 }
 .json-schema-view.json-schema-view-dark, json-schema-view[json-schema-view-dark] {
-  font-family: monospace;
+  font-family:Monaco,Menlo,Consolas,"Courier New",monospace;
   font-size: 0;
   display: table-cell
 }
